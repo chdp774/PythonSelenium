@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="106.671" timestamp="2023-08-16T10:35:51.232797" hostname="LAPTOP-ASHU60BH"><testcase classname="tests.test_imagility.RegisterTest" name="test_imagility" time="105.651"><failure message="seleniumbase.common.exceptions.NoSuchElementException: Message: &#10; Element {p-radiobutton[label=&quot;No&quot;] div:nth-of-type(2)} was not present after 7 seconds!">self = &lt;tests.test_imagility.RegisterTest testMethod=test_imagility&gt;
+
+    def test_imagility(self):
+        self.open_imagility_site()
+        self.click_on_registor_btn()
+&gt;       self.fill_register_form()
+
+tests\test_imagility.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+page_objects\img_login_page.py:50: in fill_register_form
+    self.click(self.next)
+venv\lib\site-packages\seleniumbase\fixtures\base_case.py:397: in click
+    element = page_actions.wait_for_element_visible(
+venv\lib\site-packages\seleniumbase\fixtures\page_actions.py:495: in wait_for_element_visible
+    timeout_exception(NoSuchElementException, message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+exception = &lt;class 'selenium.common.exceptions.NoSuchElementException'&gt;, message = 'Element {p-radiobutton[label="No"] div:nth-of-type(2)} was not present after 7 seconds!'
+
+    def timeout_exception(exception, message):
+        exc, msg = shared_utils.format_exc(exception, message)
+&gt;       raise exc(msg)
+E       seleniumbase.common.exceptions.NoSuchElementException: Message: 
+E        Element {p-radiobutton[label="No"] div:nth-of-type(2)} was not present after 7 seconds!
+
+venv\lib\site-packages\seleniumbase\fixtures\page_actions.py:258: NoSuchElementException</failure></testcase></testsuite></testsuites>
