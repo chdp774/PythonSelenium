@@ -9,9 +9,10 @@ class MagentoTest(LoginPage):
         self.type('#login', TestData.M2_password)
         self.click("//span[contains(text(), 'Sign in')]")
         self.assert_title('Dashboard / Magento Admin')
+        self.sleep(5)
         self.click('#menu-magento-customer-customer', timeout=30)  # Menu - Customers
-        self.sleep(2)
-        self.click('.item-customer-manage', timeout=30)  # Menu - All customers
+        self.sleep(5)
+        self.click('.item-customer-manage', timeout=10)  # Menu - All customers
         # try:
         #     print('Try block')
         #     self.click(".admin__data-grid-header button[data-bind *= 'Clear all']")
